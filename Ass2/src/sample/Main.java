@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import java.io.*;
 
 public class Main extends Application {
+    String computer;
+    String path;
     @FXML
     void initialize(){
 
@@ -89,6 +91,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        //computer = arg[0];
+        //path = arg[1];
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("File Sharing System");
         primaryStage.setScene(new Scene(root, 600, 425));
