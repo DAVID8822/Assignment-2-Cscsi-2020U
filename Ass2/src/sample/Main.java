@@ -11,8 +11,8 @@ import javafx.stage.Stage;
 import java.io.*;
 
 public class Main extends Application {
-    String computer;
-    String path;
+    //String computer;
+    //String path;
     @FXML
     void initialize(){
 
