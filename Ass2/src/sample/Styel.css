@@ -1,0 +1,12 @@
+.button {
+-fx-background-color: #CCFF99;
+-fx-font: 10px "Comic Sans";
+}
+
+.tView1{
+-fx-base: orange;
+}
+
+.tView2{
+-fx-base: indigo;
+}
