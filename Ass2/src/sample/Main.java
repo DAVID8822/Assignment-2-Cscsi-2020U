@@ -28,16 +28,16 @@ public class Main extends Application {
 
     @FXML
     public void download() throws IOException {
-        /*
-        File file;
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line = "";
-        BufferedWriter bw = new BufferedWriter(new FileWriter("Location"));
-        while ((line = br.readLine()) != null){
-            System.out.println(line);
-            bw.write(line);
-        }
-        */
+	/*
+	File file;
+	BufferedReader br = new BufferedReader(new FileReader(file));
+	String line = "";
+	BufferedWriter bw = new BufferedWriter(new FileWriter("Location"));
+	while ((line = br.readLine()) != null){
+	    System.out.println(line);
+	    bw.write(line);
+	}
+	*/
     }
 
     /**
@@ -48,23 +48,23 @@ public class Main extends Application {
 
     @FXML
     public void upload() throws IOException {
-        /*
+	/*
 
-        String line = "";
-        FileChooser fileChooser = new FileChooser();
-        String currentFilename = fileChooser.showOpenDialog(stage).getName();
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", ".txt"));
-        BufferedReader reader = new BufferedReader(new FileReader(currentFilename));
-        while ((line = reader.readLine()) != null) {
+	String line = "";
+	FileChooser fileChooser = new FileChooser();
+	String currentFilename = fileChooser.showOpenDialog(stage).getName();
+	fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", ".txt"));
+	BufferedReader reader = new BufferedReader(new FileReader(currentFilename));
+	while ((line = reader.readLine()) != null) {
 
-            text += line;
-            Entry entry =  new Entry();
-            Table.add(entry);
-        }
-        finish reading
-        reader.close();
+	    text += line;
+	    Entry entry =  new Entry();
+	    Table.add(entry);
+	}
+	finish reading
+	reader.close();
 
-        */
+	*/
     }
 
     /**
@@ -75,30 +75,44 @@ public class Main extends Application {
 
     @FXML
     public void dir(File file) throws IOException {
-        // read the contents from the file
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line;
+	// read the contents from the file
+	BufferedReader br = new BufferedReader(new FileReader(file));
+	String line;
 
-        //output the contents of the file
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
-        }
-        br.close();
+	//output the contents of the file
+	while ((line = br.readLine()) != null) {
+	    System.out.println(line);
+	}
+	br.close();
 
     }
+    /*
+    @FXML
+    public void download() throws IOException {
+       for file in remote server directory
+	copy each character in file to client directory
 
+    }
+    */
+	/*
+    @FXML
+    public void upload() throws IOException {
+	for file in local shared directory,
+	    copy each character in file to remote shared folder
+    }
+    */
 
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //computer = arg[0];
-        //path = arg[1];
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("File Sharing System");
-        primaryStage.setScene(new Scene(root, 600, 425));
-        //add UI elements to control the inputs for the client to replace the ChatServClient.run
-        primaryStage.show();
-        //Thread client = new Thread();
+	//computer = arg[0];
+	//path = arg[1];
+	Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+	primaryStage.setTitle("File Sharing System");
+	primaryStage.setScene(new Scene(root, 600, 425));
+	//add UI elements to control the inputs for the client to replace the ChatServClient.run
+	primaryStage.show();
+	//Thread client = new Thread();
     }
 
 }
